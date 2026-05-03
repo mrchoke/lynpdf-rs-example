@@ -1,0 +1,13 @@
+[package]
+name = "lynpdf-rs-example"
+version = "0.1.0"
+edition = "2021"
+description = "Example shop checkout app that generates receipt PDFs with lynpdf-rs"
+license = "MIT"
+
+[dependencies]
+axum = { version = "0.7", features = ["form"] }
+chrono = { version = "0.4", default-features = true }
+lynpdf-rs = { git = "https://github.com/mrchoke/lynpdf-rs", branch = "main" }
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net"] }
